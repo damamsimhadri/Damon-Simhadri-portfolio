@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Damam Simhadri – Social Media Marketer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f7;--card:#fff;--ink:#14213d;--mute:#5a6785;--or:#f05a1a;--lil:#dcd6fb;--line:#d6dcea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101526;--card:#1a2140;--ink:#eef1fb;--mute:#a3aecb;--or:#ff7a3d;--lil:#3a3470;--line:#2c3558}}
+:root[data-theme="dark"]{--bg:#101526;--card:#1a2140;--ink:#eef1fb;--mute:#a3aecb;--or:#ff7a3d;--lil:#3a3470;--line:#2c3558}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.1;margin:0}
+main{max-width:760px;margin:0 auto;padding:20px 18px 64px}
+section{margin-top:44px}
+h2{font-size:1.6rem;margin-bottom:16px}
+.profile{background:var(--card);border-radius:28px;padding:24px;display:grid;grid-template-columns:auto 1fr;gap:18px 22px;align-items:center}
+.ring{width:104px;height:104px;border-radius:50%;padding:4px;background:conic-gradient(var(--or),#ffb347,var(--lil),var(--or));animation:spin 1.6s ease-out 1}
+.ring div{width:100%;height:100%;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:800 2rem "Bricolage Grotesque",sans-serif}
+@keyframes spin{from{transform:rotate(-180deg) scale(.8);opacity:0}}
+.profile h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:800;letter-spacing:-.02em}
+.role{color:var(--or);font-weight:600;margin:4px 0 0}
+.bio{grid-column:1/-1;margin:0;max-width:56ch}
+.stats{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
+.stats div{flex:1;min-width:90px;background:var(--bg);border-radius:16px;padding:10px 14px}
+.stats b{display:block;font:800 1.5rem "Bricolage Grotesque",sans-serif}
+.stats span{font-size:.85rem;color:var(--mute)}
+.cta{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
+a.btn{background:var(--or);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:99px}
+a.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.hl{display:flex;gap:16px;overflow-x:auto;padding:4px 2px 10px}
+.hl button{all:unset;cursor:pointer;text-align:center;flex:0 0 auto;width:84px;font-size:.85rem;font-weight:500}
+.hl i{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 6px;border-radius:50%;background:var(--card);border:3px solid var(--line);font-style:normal;font-size:1.6rem;transition:border-color .2s,transform .2s}
+.hl button[aria-pressed="true"] i{border-color:var(--or);transform:scale(1.08)}
+.panel{background:var(--card);border-radius:22px;padding:20px;min-height:120px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--lil);padding:6px 14px;border-radius:99px;font-weight:500;font-size:.95rem}
+.chips li:has(button){padding:0}.chips button{all:unset;cursor:pointer;display:block;padding:6px 14px;border-radius:99px;font-weight:500;font-size:.95rem;transition:background .2s,color .2s}
+.chips button[aria-pressed="true"]{background:var(--or);color:#fff}.chips button:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+.det{margin-top:16px;padding:14px 16px;border-left:4px solid var(--or);background:var(--bg);border-radius:0 14px 14px 0}.det b{font:700 1.1rem "Bricolage Grotesque",sans-serif}.det p{margin:4px 0 0}
+.post{background:var(--card);border-radius:22px;padding:20px;margin-bottom:14px}
+.post header{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--lil);display:grid;place-items:center;font-weight:700;flex:none}
+.post h3{font-size:1.15rem}.post small{color:var(--mute)}
+.post ul{margin:8px 0 0;padding-left:20px}
+.tag{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--or);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.grid .post{margin:0}
+.grid p{margin:4px 0}
+.score{font:800 2rem "Bricolage Grotesque",sans-serif;color:var(--or)}
+footer{margin-top:50px;background:var(--ink);color:var(--bg);border-radius:28px;padding:28px}
+footer h2{font-size:2rem}footer a{color:inherit;font-weight:600}
+footer p{margin:6px 0}
+.profile{position:relative;overflow:hidden}.profile>*{position:relative;z-index:1}
+.profile>.fl{position:absolute;z-index:0;bottom:-30px;font-size:1.6rem;opacity:0;animation:rise 6s ease-in infinite;pointer-events:none}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.9}100%{transform:translateY(-260px) translateX(18px) scale(1.2);opacity:0}}
+.ring{position:relative}.ring:after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--or);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(.9);opacity:.8}to{transform:scale(1.25);opacity:0}}
+.typed:after{content:"|";color:var(--or);animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.marq{margin:30px -18px 0;overflow:hidden;background:var(--or);color:#fff;transform:rotate(-1.5deg);padding:12px 0}
+.marq div{display:flex;gap:36px;width:max-content;animation:slide 26s linear infinite;font:700 1.15rem "Bricolage Grotesque",sans-serif;white-space:nowrap}
+@keyframes slide{to{transform:translateX(-50%)}}
+.funnel{background:var(--card);border-radius:22px;padding:18px}.funnel svg{width:100%;height:auto;display:block}
+.funnel text{font:600 15px Figtree,sans-serif;fill:#fff}.funnel .dk{fill:var(--ink)}
+.funnel p{margin:8px 0 0;color:var(--mute);font-size:.9rem}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}.kpis .post{margin:0;padding:16px}.kpis .score{font-size:1.7rem}.kpis small{display:block;line-height:1.3}
+.row{margin:14px 0}.rt{display:flex;justify-content:space-between;gap:10px;font-weight:500;font-size:.95rem;margin-bottom:5px}.rt span:last-child{color:var(--mute);text-align:right}
+.bar{height:12px;border-radius:99px;background:var(--bg);overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--or);border-radius:99px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}.bar.p i{background:#7a63e6}.in .bar i{width:var(--w)}
+.best{display:inline-block;background:var(--lil);border-radius:99px;padding:2px 10px;font-size:.8rem;font-weight:600;margin-left:6px}.note{color:var(--mute);font-size:.85rem;margin:6px 0 0}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+@media (prefers-reduced-motion:reduce){.ring,.ring:after,.fl,.marq div,.typed:after{animation:none}.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}main{position:relative;z-index:1}
+.profile,.post,.panel,.funnel{background:color-mix(in srgb,var(--card) 84%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.post,.panel,.funnel{position:relative;overflow:hidden}
+.post:after{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,-50%),rgba(240,90,26,.2),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}.post:hover:after{opacity:1}
+.profile{transition:transform .2s}
+.profile:before{content:"";position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent 0 20%,rgba(240,90,26,.3) 35%,transparent 50%,rgba(122,99,230,.32) 75%,transparent 90%);filter:blur(40px);animation:aur 14s linear infinite;z-index:0}@keyframes aur{to{transform:rotate(360deg)}}
+.profile h1{animation:glitch 5s infinite}
+@keyframes glitch{0%,92%,100%{text-shadow:none;transform:none}93%{text-shadow:3px 0 #ff2e63,-3px 0 #08f7fe;transform:translateX(-2px)}95%{text-shadow:-3px 0 #ff2e63,3px 0 #08f7fe;transform:translateX(2px) skewX(-4deg)}97%{text-shadow:2px 0 #ff2e63,-2px 0 #08f7fe;transform:none}}
+.bar i{box-shadow:0 0 14px var(--or);background-image:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);background-size:200% 100%;animation:shine 2.4s linear infinite}.bar.p i{box-shadow:0 0 14px #7a63e6}
+@keyframes shine{from{background-position:200% 0}to{background-position:-200% 0}}
+.score{text-shadow:0 0 18px color-mix(in srgb,var(--or) 45%,transparent)}
+.sp{position:fixed;width:6px;height:6px;border-radius:50%;background:var(--or);box-shadow:0 0 8px var(--or);pointer-events:none;z-index:9;animation:spk .7s ease-out forwards}@keyframes spk{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+@media (prefers-reduced-motion:reduce){.profile:before,.profile h1,.bar i{animation:none}}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+.post:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--a),#f05a1a,#7a63e6,#08f7fe,#f05a1a);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:.5;animation:ang 6s linear infinite;pointer-events:none}
+@keyframes ang{to{--a:360deg}}
+h2{position:relative;display:inline-block}h2:after{content:"";position:absolute;left:0;bottom:-6px;height:3px;width:0;border-radius:3px;background:linear-gradient(90deg,var(--or),#7a63e6,#08f7fe);box-shadow:0 0 12px var(--or);transition:width 1s .3s}h2.in:after{width:100%}
+.ring:before{content:"";position:absolute;inset:-16px;border-radius:50%;border:1px dashed var(--or);background:radial-gradient(circle at 50% 0,#08f7fe 0 4px,transparent 5px);animation:orb 7s linear infinite}@keyframes orb{to{transform:rotate(360deg)}}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--or),#7a63e6,#08f7fe);box-shadow:0 0 12px var(--or);z-index:20}
+.tr{position:fixed;width:12px;height:12px;margin:-6px;border-radius:50%;background:radial-gradient(circle,#fff,var(--or) 50%,transparent 70%);pointer-events:none;z-index:9;animation:trl .6s forwards}@keyframes trl{to{transform:scale(.1);opacity:0}}
+.rp{position:fixed;width:20px;height:20px;margin:-10px;border:2px solid var(--or);border-radius:50%;pointer-events:none;z-index:9;animation:rpl .7s ease-out forwards}@keyframes rpl{to{transform:scale(8);opacity:0}}
+.ss{position:fixed;width:140px;height:2px;background:linear-gradient(90deg,transparent,var(--or));pointer-events:none;z-index:0;opacity:0;animation:shoot 1.1s ease-out forwards}@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(25deg)}20%{opacity:1}100%{opacity:0;transform:translate(320px,150px) rotate(25deg)}}
+@media (prefers-reduced-motion:reduce){.ring:before,.post:before{animation:none}h2:after{transition:none;width:100%}}
+.art{width:100%;height:auto;display:block;margin-bottom:8px}.art text{font:600 11px Figtree,sans-serif}.pulse,.dot{transform-box:fill-box;transform-origin:center;animation:pls 1.8s ease-in-out infinite}@keyframes pls{50%{transform:scale(1.25)}}
+.grow{transform-box:fill-box;transform-origin:bottom;animation:grw 2.4s ease-out infinite alternate}@keyframes grw{from{transform:scaleY(.2)}}
+.bub{opacity:0;animation:pop 3.6s infinite}.b2{animation-delay:1s}.b3{animation-delay:2s}@keyframes pop{10%,80%{opacity:1}90%,100%{opacity:0}}
+.cht svg{width:100%;height:auto;display:block}.cht text{font:500 11px Figtree,sans-serif;fill:var(--mute)}.cht .q{font-weight:700;fill:var(--ink)}
+.lg{list-style:none;padding:0;margin:0;font-size:.92rem}.lg li{margin:6px 0}.lg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px}
+@media (prefers-reduced-motion:reduce){.pulse,.dot,.grow,.bub{animation:none;opacity:1}}
+body{background:radial-gradient(900px 520px at 8% -8%,rgba(240,90,26,.2),transparent 60%),radial-gradient(800px 520px at 100% 12%,rgba(122,99,230,.22),transparent 60%),radial-gradient(700px 500px at 0% 70%,rgba(8,196,212,.14),transparent 60%),var(--bg);background-attachment:fixed}
+main{padding-bottom:120px}h2{font-size:1.9rem;scroll-margin-top:24px}
+.ic{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--or),#7a63e6);font-size:1.15rem;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(240,90,26,.3)}
+.hcs{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 16px;scroll-snap-type:x mandatory}
+.hc{position:relative;flex:0 0 200px;scroll-snap-align:start;border-radius:24px;padding:18px;color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2));overflow:hidden;box-shadow:0 10px 24px color-mix(in srgb,var(--g1) 35%,transparent)}
+.hc:before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:swp 4s ease-in-out infinite}@keyframes swp{0%,60%{left:-60%}100%{left:130%}}
+.hc b{display:block;font:800 2rem "Bricolage Grotesque",sans-serif;margin-top:10px;line-height:1.1}.hc small{display:block;line-height:1.3;opacity:.92}
+.hi{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.22);font-size:1.5rem}
+.js .post.in:hover{transform:translateY(-4px)}.post:hover{box-shadow:0 14px 30px rgba(20,33,61,.14)}
+.tag{background:var(--lil);padding:3px 12px;border-radius:99px}
+a.btn{transition:transform .2s,box-shadow .2s}a.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(240,90,26,.4)}
+.dock{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:4px;padding:6px;border-radius:99px;background:color-mix(in srgb,var(--card) 80%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 10px 30px rgba(20,33,61,.25),0 0 0 1px var(--line)}
+.dock button{all:unset;cursor:pointer;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;transition:background .2s,transform .2s}.dock button.on{background:linear-gradient(135deg,var(--or),#7a63e6);transform:translateY(-4px) scale(1.08)}.dock button:focus-visible{outline:3px solid var(--or)}
+@media (prefers-reduced-motion:reduce){.hc:before{animation:none}}
+.bt{all:unset;box-sizing:border-box;cursor:pointer;font:600 1rem Figtree,system-ui,sans-serif;color:var(--ink);border:2px solid var(--line);padding:10px 18px;border-radius:99px;transition:transform .2s,border-color .2s,background .2s}.bt:hover{border-color:var(--or);transform:translateY(-2px);background:var(--lil)}.bt:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.tools{display:flex;justify-content:flex-end;margin:-4px 0 12px}
+.tls{list-style:none;margin:0 0 0 8px;padding:0 0 0 20px;border-left:3px solid var(--line)}.tl{position:relative;margin:0 0 12px}.tl:before{content:"";position:absolute;left:-30px;top:20px;width:13px;height:13px;border-radius:50%;background:var(--or);box-shadow:0 0 0 4px var(--bg),0 0 12px var(--or)}
+.tlb{all:unset;cursor:pointer;display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;background:color-mix(in srgb,var(--card) 84%,transparent);border-radius:18px;padding:14px 16px;font:500 1rem Figtree,system-ui,sans-serif;color:var(--ink)}.tlb:focus-visible{outline:3px solid var(--or)}
+.yr{font:800 .95rem "Bricolage Grotesque",sans-serif;color:var(--or);min-width:78px}.tt{flex:1;font-weight:600}.chev{font-size:1.3rem;transition:transform .25s}.tl.open .chev{transform:rotate(45deg)}
+.tld{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}.tl.open .tld{grid-template-rows:1fr}.tld>p{overflow:hidden;margin:0;padding:0 16px;color:var(--mute)}.tl.open .tld>p{padding:10px 16px 4px}
+.toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:40}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.tld,.chev,.toast{transition:none}}
+.art{filter:drop-shadow(0 8px 14px rgba(240,90,26,.28));animation:flt 4s ease-in-out infinite}@keyframes flt{50%{transform:translateY(-6px)}}
+@keyframes pop{0%{opacity:0;transform:translateX(-14px) scale(.85)}12%,80%{opacity:1;transform:none}92%,100%{opacity:0;transform:translateY(-8px)}}
+svg[aria-label="Phone showing a social media post"] rect:nth-of-type(2){animation:hue 4s linear infinite}@keyframes hue{0%,100%{fill:#f05a1a}33%{fill:#7a63e6}66%{fill:#08c4d4}}
+svg[aria-label="Phone showing a social media post"] circle{transform-box:fill-box;transform-origin:center;animation:pls 1.4s ease-in-out infinite}
+.hrt2{font-size:12px;opacity:0;animation:rise2 3s ease-in infinite}@keyframes rise2{0%{opacity:0;transform:translateY(0)}20%{opacity:1}100%{opacity:0;transform:translateY(-80px) translateX(var(--dx,0px))}}
+svg[aria-label="Target with an arrow"] circle:nth-of-type(1),svg[aria-label="Target with an arrow"] circle:nth-of-type(2){transform-box:fill-box;transform-origin:center;animation:rng 2.4s ease-in-out infinite}svg[aria-label="Target with an arrow"] circle:nth-of-type(2){animation-delay:.3s}@keyframes rng{50%{transform:scale(1.1)}}
+svg[aria-label="Target with an arrow"] path{animation:fly 3s ease-in-out infinite}@keyframes fly{0%{transform:translate(46px,-46px);opacity:0}25%{opacity:1}45%,100%{transform:none;opacity:1}}
+svg[aria-label="WhatsApp style chat bubbles"] circle{animation:bnc 1.2s ease-in-out infinite}svg[aria-label="WhatsApp style chat bubbles"] circle:nth-of-type(2){animation-delay:.15s}svg[aria-label="WhatsApp style chat bubbles"] circle:nth-of-type(3){animation-delay:.3s}@keyframes bnc{50%{transform:translateY(-5px)}}
+svg[aria-label="Rising bar chart"] path:nth-of-type(2){stroke-dasharray:160;animation:draw 3s ease-in-out infinite alternate}@keyframes draw{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.art,.art *{animation:none!important}.hrt2{display:none}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="pg" aria-hidden="true"></div>
+<main>
+<div class="profile"><span class="fl" style="left:8%;animation-delay:0s">❤️</span><span class="fl" style="left:24%;animation-delay:1.4s">💬</span><span class="fl" style="left:42%;animation-delay:.7s">📲</span><span class="fl" style="left:60%;animation-delay:2.2s">👍</span><span class="fl" style="left:76%;animation-delay:3.1s">📈</span><span class="fl" style="left:90%;animation-delay:1.9s">⭐</span>
+  <div class="ring"><div>DS</div></div>
+  <div>
+    <h1>Damam Simhadri</h1>
+    <p class="role"><span class="typed" id="typed">Social Media Marketer</span></p><p style="margin:4px 0 0;color:var(--mute)">Kurnool, Andhra Pradesh</p>
+  </div>
+  <p class="bio">I run social pages, WhatsApp campaigns and paid search for real estate and healthcare brands, and I turn followers into enquiries. I also know the sales floor, having worked as a sales advisor and business development executive.</p>
+  <div class="stats">
+    <div><b data-n="3">0</b><span>organisations</span></div>
+    <div><b data-n="5">0</b><span>roles held</span></div>
+    <div><b data-n="3">0</b><span>languages</span></div>
+  </div>
+  <div class="cta">
+    <a class="btn" href="mailto:udaydamam@gmail.com">Email me</a>
+    <a class="btn alt" href="tel:+919177033342">Call 9177033342</a>
+    <a class="btn alt" href="https://www.linkedin.com/in/damam-simhadri-a49b7937b" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" style="background:#25d366" href="https://wa.me/919177033342" target="_blank" rel="noopener">WhatsApp me</a>
+    <button class="bt" id="vr">View my results</button>
+    <button class="bt" id="cp">Copy email</button>
+    <button class="bt" id="sh">Share</button>
+  </div>
+</div>
+
+<section>
+  <h2>Highlights</h2>
+  <div class="hcs">
+    <div class="hc" style="--g1:#f05a1a;--g2:#ff9a3d"><span class="hi">🏆</span><b data-c="535">0</b><small>leads from one campaign (DBD HYD)</small></div>
+    <div class="hc" style="--g1:#7a63e6;--g2:#a78bfa"><span class="hi">💰</span><b data-c="75.18" data-d="2" data-p="₹">0</b><small>lowest cost per lead</small></div>
+    <div class="hc" style="--g1:#3b6fd8;--g2:#08c4d4"><span class="hi">📈</span><b>2.65%</b><small>best click-through rate (Mahagiri HYD)</small></div>
+    <div class="hc" style="--g1:#0f9d7a;--g2:#7be0a8"><span class="hi">🎯</span><b data-c="1240">0</b><small>leads across 51 campaigns</small></div>
+    <div class="hc" style="--g1:#e0447a;--g2:#ff8fab"><span class="hi">👀</span><b data-c="3902698">0</b><small>impressions delivered</small></div>
+    <div class="hc" style="--g1:#14213d;--g2:#3a4a7a"><span class="hi">💬</span><b data-c="33">0</b><small>message conversations started</small></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div><span>Performance Marketing ✦</span><span>Search Engine Marketing ✦</span><span>Social Media Marketing ✦</span><span>WhatsApp Campaigns ✦</span><span>Brand Strategy ✦</span><span>Budget Management ✦</span><span>Meta Ads ✦</span><span>Google Ads ✦</span><span>Lead Generation ✦</span><span>Performance Marketing ✦</span><span>Search Engine Marketing ✦</span><span>Social Media Marketing ✦</span><span>WhatsApp Campaigns ✦</span><span>Brand Strategy ✦</span><span>Budget Management ✦</span></div></div>
+
+<section>
+  <h2>What I do</h2>
+  <div class="hl" role="group" aria-label="Skill groups">
+    <button aria-pressed="true" data-k="mkt"><i>📣</i>Marketing</button>
+    <button aria-pressed="false" data-k="role"><i>🎯</i>Specialties</button>
+    <button aria-pressed="false" data-k="lead"><i>🧭</i>Leadership</button>
+    <button aria-pressed="false" data-k="tool"><i>🛠️</i>Tools</button>
+    <button aria-pressed="false" data-k="lang"><i>🗣️</i>Languages</button>
+  </div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+</section>
+
+<section>
+  <h2>How I turn views into sales</h2>
+  <div class="funnel">
+    <svg viewBox="0 0 600 250" role="img" aria-label="Funnel from social reach to enquiries to site visits to sales">
+      <rect x="0" y="0" width="600" height="52" rx="14" fill="#f05a1a"/><text x="300" y="32" text-anchor="middle">Social posts and ads reach people</text>
+      <rect x="60" y="66" width="480" height="52" rx="14" fill="#7a63e6"/><text x="300" y="98" text-anchor="middle">WhatsApp campaigns start conversations</text>
+      <rect x="120" y="132" width="360" height="52" rx="14" fill="#3b6fd8"/><text x="300" y="164" text-anchor="middle">Sales advisor follows up</text>
+      <rect x="180" y="198" width="240" height="52" rx="14" fill="#14213d" stroke="#f05a1a" stroke-width="2"/><text x="300" y="230" text-anchor="middle">Customer</text>
+      <circle r="7" fill="#ffd166"><animateMotion dur="3.2s" repeatCount="indefinite" path="M300 10 L300 240"/></circle>
+      <circle r="6" fill="#ffd166"><animateMotion dur="3.2s" begin="1.1s" repeatCount="indefinite" path="M200 10 L300 240"/></circle>
+      <circle r="6" fill="#ffd166"><animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite" path="M400 10 L300 240"/></circle>
+    </svg>
+    <p>My approach, combining digital marketing with hands-on sales experience.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Marketing in pictures</h2>
+  <div class="grid">
+    <div class="post"><svg class="art" viewBox="0 0 160 120" role="img" aria-label="Phone showing a social media post"><rect x="50" y="6" width="60" height="108" rx="10" fill="none" stroke="var(--ink)" stroke-width="3"/><rect x="58" y="18" width="44" height="40" rx="5" fill="#f05a1a"/><circle cx="80" cy="38" r="9" fill="#fff" opacity=".85"/><rect x="58" y="66" width="30" height="5" rx="2" fill="var(--mute)"/><rect x="58" y="76" width="44" height="5" rx="2" fill="var(--line)"/><path class="pulse" d="M72 100c-6-5-9-8-9-11 0-3 2-4 4-4 2 0 4 1 5 3 1-2 3-3 5-3 2 0 4 1 4 4 0 3-3 6-9 11z" fill="#ff2e63"/><text class="pulse" x="122" y="40" font-size="16">👍</text><text class="pulse" x="22" y="60" font-size="16">💬</text></svg><h3>Social media</h3><p>Content calendars, captions and creatives for brand pages, built around real estate and healthcare audiences.</p></div>
+    <div class="post"><svg class="art" viewBox="0 0 160 120" role="img" aria-label="Target with an arrow"><circle cx="80" cy="60" r="46" fill="#f05a1a" opacity=".25"/><circle cx="80" cy="60" r="32" fill="#f05a1a" opacity=".5"/><circle class="pulse" cx="80" cy="60" r="16" fill="#f05a1a"/><path d="M80 60L128 14M128 14h-14M128 14v14" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" fill="none"/></svg><h3>Paid ads</h3><p>Meta and Google campaigns aimed at the right audience, with budget moved toward what works.</p></div>
+    <div class="post"><svg class="art" viewBox="0 0 160 120" role="img" aria-label="WhatsApp style chat bubbles"><rect class="bub" x="14" y="14" width="96" height="26" rx="12" fill="var(--lil)"/><rect class="bub b2" x="50" y="48" width="96" height="26" rx="12" fill="#25d366"/><rect class="bub b3" x="14" y="82" width="70" height="26" rx="12" fill="var(--lil)"/><circle cx="30" cy="95" r="3" fill="var(--mute)"/><circle cx="42" cy="95" r="3" fill="var(--mute)"/><circle cx="54" cy="95" r="3" fill="var(--mute)"/></svg><h3>WhatsApp campaigns</h3><p>Campaign messages and quick follow-ups that turn enquiries into site visits.</p></div>
+    <div class="post"><svg class="art" viewBox="0 0 160 120" role="img" aria-label="Rising bar chart"><path d="M20 104H146" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><rect class="grow" x="30" y="70" width="22" height="34" rx="4" fill="#7a63e6"/><rect class="grow" x="62" y="50" width="22" height="54" rx="4" fill="#3b6fd8"/><rect class="grow" x="94" y="32" width="22" height="72" rx="4" fill="#08c4d4"/><path d="M30 56L72 38 106 20 134 10" stroke="#f05a1a" stroke-width="4" fill="none" stroke-linecap="round"/><circle class="pulse" cx="134" cy="10" r="6" fill="#f05a1a"/></svg><h3>Analytics</h3><p>Reading reach, clicks and cost per lead to decide what to scale and what to stop.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <ul class="chips" style="margin-bottom:16px"><li>3 organisations</li><li>5 roles</li><li>Kurnool, Andhra Pradesh</li></ul>
+  <article class="post">
+    <header><div class="av">VM</div><div><h3>Digital Co-ordinator</h3><small>Viswabharathi Medical College &amp; Hospital · Penchikalpadu, Kurnool</small></div></header>
+    <small>May 2025 – Aug 2025 · 4 months</small>
+    <ul><li>Managed social media for a medical college and hospital.</li><li>Planned and published content to keep the pages active and consistent.</li><li>Co-ordinated the hospital’s digital presence as the point person for online activity.</li></ul>
+    <span class="tag">Healthcare</span> <span class="tag">Social media management</span>
+  </article>
+  <article class="post">
+    <header><div class="av">SI</div><div><h3>Social Media Manager · Digital Marketing</h3><small>Saurabhii Infra Projects · Kurnool</small></div></header>
+    <small>Jun 2024 – Apr 2025</small>
+    <ul><li>Managed social media pages and ran digital marketing for a real estate developer.</li><li>Ran Meta Ads campaigns across reach, lead generation, traffic and messaging goals, plus WhatsApp campaigns.</li><li>Tracked cost per lead and planned ad budgets.</li><li>In this ad account: 19 campaigns, ₹65,316.03 spent, 1,346,559 impressions, 439,763 people reached and 322 leads from forms. Best cost: ₹89.21 per lead (BBC).</li></ul>
+    <span class="tag">Real estate</span> <span class="tag">Meta Ads</span> <span class="tag">Lead generation</span>
+  </article>
+  <article class="post">
+    <header><div class="av">AP</div><div><h3>Sr. Sales Advisor</h3><small>Anantha Projects · Kurnool</small></div></header>
+    <small>Jun 2024 – Apr 2025</small>
+    <ul><li><b>Sales Advisor, 1½ years:</b> advised customers and followed up on enquiries.</li><li><b>Business Development Executive, 6 months:</b> worked on finding new customers and opportunities.</li><li><b>Digital Co-ordinator, 3 months:</b> handled digital activity alongside sales.</li></ul>
+    <span class="tag">Real estate</span> <span class="tag">Sales</span> <span class="tag">Business development</span>
+  </article>
+</section>
+
+<section>
+  <h2>Campaign results</h2>
+  <p class="note" style="margin:-6px 0 16px">Meta Ads, Oct 2023 to Nov 2026. Totals combine three Meta Ads reports (Saurabhii Infra Projects, a Hyderabad account and an earlier account), in INR.</p>
+  <div class="kpis">
+    <div class="post"><b class="score" data-c="51">0</b><small>campaigns run</small></div>
+    <div class="post"><b class="score" data-c="173758.75" data-d="2" data-p="₹">0</b><small>total ad spend</small></div>
+    <div class="post"><b class="score" data-c="3902698">0</b><small>impressions</small></div>
+    <div class="post"><b class="score">2.65%</b><small>best click-through rate</small></div>
+    <div class="post"><b class="score" data-c="1240">0</b><small>leads from forms</small></div>
+    <div class="post"><b class="score" data-c="75.18" data-d="2" data-p="₹">0</b><small>lowest cost per lead</small></div>
+    <div class="post"><b class="score" data-c="33">0</b><small>message conversations</small></div>
+  </div>
+  <div class="post cht">
+    <h3>Lead volume vs cost matrix</h3><small>Each dot is a campaign. Top right is best: many leads for less money. Leads are on a log scale.</small>
+    <svg viewBox="0 0 600 380" role="img" aria-label="Matrix of leads against cost per lead">
+      <rect x="50" y="20" width="530" height="310" rx="10" fill="var(--bg)"/>
+      <rect x="297" y="20" width="283" height="77.5" fill="#f05a1a" opacity=".14"/>
+      <line x1="297" y1="20" x2="297" y2="330" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 4"/><line x1="50" y1="97.5" x2="580" y2="97.5" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 4"/>
+      <text class="q" x="50" y="13">Low cost, few leads: scale up</text><text class="q" x="580" y="13" text-anchor="end">Stars: many leads, low cost</text>
+      <text class="q" x="576" y="322" text-anchor="end">Many leads, higher cost: optimise</text><text class="q" x="110" y="322">Review</text>
+      <text x="124" y="348" text-anchor="middle">10</text><text x="297" y="348" text-anchor="middle">50</text><text x="371" y="348" text-anchor="middle">100</text><text x="544" y="348" text-anchor="middle">500 leads</text>
+      <text x="44" y="58" text-anchor="end">₹100</text><text x="44" y="144" text-anchor="end">₹200</text><text x="44" y="230" text-anchor="end">₹300</text><text x="44" y="316" text-anchor="end">₹400</text>
+      <g stroke="#fff" stroke-width="1.5">
+        <circle class="dot" cx="551" cy="68.6" r="9" fill="#f05a1a"><title>DBD HYD: 535 leads, ₹116.49 each</title></circle>
+        <circle class="dot" cx="417" cy="44.5" r="7" fill="#f05a1a"><title>Mahagiri HYD: 153 leads, ₹88.45 each</title></circle>
+        <circle class="dot" cx="375.5" cy="68.3" r="7" fill="#f05a1a"><title>FL POLTS: 104 leads, ₹116.05 each</title></circle>
+        <circle class="dot" cx="355" cy="56.4" r="7" fill="#f05a1a"><title>Golden: 86 leads, ₹102.25 each</title></circle>
+        
+        <circle class="dot" cx="340" cy="115" r="7" fill="#7a63e6"><title>IM &amp; MSG: 75 leads, ₹170.58 each</title></circle>
+        <circle class="dot" cx="325" cy="98" r="7" fill="#7a63e6"><title>SIP I&amp;M Form – 1: 65 leads, ₹150.81 each</title></circle>
+        <circle class="dot" cx="316.5" cy="61.6" r="7" fill="#7a63e6"><title>SIP NEW 1: 60 leads, ₹108.28 each</title></circle>
+        
+        <circle class="dot" cx="234.7" cy="69.4" r="7" fill="#7a63e6"><title>SIP NEW 1 – budget: 28 leads, ₹117.38 each</title></circle>
+        <circle class="dot" cx="193" cy="45.2" r="7" fill="#7a63e6"><title>BBC: 19 leads, ₹89.21 each</title></circle>
+        <circle class="dot" cx="152.5" cy="33" r="7" fill="#08c4d4"><title>New SIP – 1: 13 leads, ₹75.18 each</title></circle>
+      </g>
+      <text x="556" y="92" text-anchor="end">DBD HYD</text><text x="417" y="33" text-anchor="middle">Mahagiri</text><text x="193" y="63" text-anchor="middle">BBC</text>
+    </svg>
+    <ul class="lg"><li><i style="background:#f05a1a"></i>Hyderabad campaigns</li><li><i style="background:#7a63e6"></i>Saurabhii Infra Projects</li><li><i style="background:#08c4d4"></i>Earlier account</li></ul>
+  </div>
+  <div class="post cht">
+    <h3>Where the budget went</h3>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:8px">
+      <svg viewBox="0 0 160 160" style="width:160px;flex:none" role="img" aria-label="Spend split by account"><g transform="rotate(-90 80 80)" fill="none" stroke-width="26"><circle cx="80" cy="80" r="60" stroke="#f05a1a" stroke-dasharray="223.2 377"/><circle cx="80" cy="80" r="60" stroke="#7a63e6" stroke-dasharray="141.7 377" stroke-dashoffset="-223.2"/><circle cx="80" cy="80" r="60" stroke="#08c4d4" stroke-dasharray="12.1 377" stroke-dashoffset="-364.9"/></g><text x="80" y="80" text-anchor="middle" style="font:800 20px 'Bricolage Grotesque',sans-serif;fill:var(--ink)">₹173.8k</text><text x="80" y="97" text-anchor="middle">total spend</text></svg>
+      <ul class="lg"><li><i style="background:#f05a1a"></i>Hyderabad campaigns: ₹102,862.75 (59%)</li><li><i style="background:#7a63e6"></i>Saurabhii Infra Projects: ₹65,316.03 (38%)</li><li><i style="background:#08c4d4"></i>Earlier account: ₹5,579.97 (3%)</li></ul>
+    </div>
+  </div>
+  <div class="post">
+    <h3>All campaigns, grouped by goal</h3><small>Reach, leads, traffic and messages from all three Meta Ads reports, in one place</small>
+    <ul class="chips"><li>🎯 12 lead campaigns</li><li>📣 3 reach campaigns</li><li>🖱️ 5 traffic campaigns</li><li>💬 2 messaging campaigns</li></ul>
+    <p class="note"><span style="color:#f05a1a">●</span> Hyderabad campaigns &nbsp; <span style="color:#7a63e6">●</span> Saurabhii Infra Projects &nbsp; <span style="color:#08c4d4">●</span> Earlier account. Bar length uses a square-root scale so smaller campaigns stay visible.</p>
+  </div>
+  <div class="post">
+    <h3>🎯 Lead campaigns</h3><small>Campaigns that brought in leads through Meta lead forms</small>
+    <div class="row"><div class="rt"><span>DBD HYD</span><span>535 leads · ₹116.49 each</span></div><div class="bar"><i style="--w:100%"></i></div></div>
+    <div class="row"><div class="rt"><span>Mahagiri HYD</span><span>153 leads · ₹88.45 each</span></div><div class="bar"><i style="--w:53%"></i></div></div>
+    <div class="row"><div class="rt"><span>FL POLTS</span><span>104 leads · ₹116.05 each</span></div><div class="bar"><i style="--w:44%"></i></div></div>
+    <div class="row"><div class="rt"><span>Golden</span><span>86 leads · ₹102.25 each</span></div><div class="bar"><i style="--w:40%"></i></div></div>
+    <div class="row"><div class="rt"><span>IM &amp; MSG</span><span>75 leads · ₹170.58 each</span></div><div class="bar p"><i style="--w:37%"></i></div></div>
+    <div class="row"><div class="rt"><span>SIP I&amp;M Form – 1</span><span>65 leads · ₹150.81 each</span></div><div class="bar p"><i style="--w:35%"></i></div></div>
+    <div class="row"><div class="rt"><span>SIP NEW 1</span><span>60 leads · ₹108.28 each</span></div><div class="bar p"><i style="--w:33%"></i></div></div>
+    <div class="row"><div class="rt"><span>SIP NEW 1 – budget</span><span>28 leads · ₹117.38 each</span></div><div class="bar p"><i style="--w:23%"></i></div></div>
+    <div class="row"><div class="rt"><span>BBC</span><span>19 leads · ₹89.21 each</span></div><div class="bar p"><i style="--w:19%"></i></div></div>
+    <div class="row"><div class="rt"><span>New SIP – 1 <em class="best" style="font-style:normal">best cost</em></span><span>13 leads · ₹75.18 each</span></div><div class="bar"><i style="--w:16%;background-color:#08c4d4"></i></div></div>
+    <div class="row"><div class="rt"><span>New SIP</span><span>9 leads · ₹225.24 each</span></div><div class="bar"><i style="--w:13%;background-color:#08c4d4"></i></div></div>
+    <div class="row"><div class="rt"><span>New SIP – 3</span><span>8 leads · ₹162.80 each</span></div><div class="bar"><i style="--w:12%;background-color:#08c4d4"></i></div></div>
+    <p class="note">Lowest cost per lead: New SIP – 1 at ₹75.18. Largest volume: DBD HYD with 535 leads. Showing the lower-cost campaigns from each account.</p>
+  </div>
+  <div class="post">
+    <h3>📣 Reach and awareness campaigns</h3><small>Campaigns built to put the brand in front of more people</small>
+    <div class="row"><div class="rt"><span>ads</span><span>335,312 people · ₹3.79 per 1,000</span></div><div class="bar"><i style="--w:100%"></i></div></div>
+    <div class="row"><div class="rt"><span>Awareness campaign SIP</span><span>168,532 people · ₹5.83 per 1,000</span></div><div class="bar p"><i style="--w:50%"></i></div></div>
+    <div class="row"><div class="rt"><span>AZHAR – Copy</span><span>43,312 people · ₹3.91 per 1,000</span></div><div class="bar"><i style="--w:13%"></i></div></div>
+    <p class="note">Independence Day awareness (Saurabhii Infra Projects) gained 90 estimated ad recallers at ₹1.44 each.</p>
+  </div>
+  <div class="post">
+    <h3>🖱️ Traffic campaigns</h3><small>Campaigns that sent people to a link, shown as link clicks</small>
+    <div class="row"><div class="rt"><span>Rakesh</span><span>397 clicks · ₹0.85 each</span></div><div class="bar"><i style="--w:100%"></i></div></div>
+    <div class="row"><div class="rt"><span>Near Billa Compound, Part 1</span><span>49 clicks · ₹1.11 each</span></div><div class="bar"><i style="--w:35%;background-color:#08c4d4"></i></div></div>
+    <div class="row"><div class="rt"><span>Near Billa Compound, Part 3</span><span>45 clicks · ₹1.37 each</span></div><div class="bar"><i style="--w:34%;background-color:#08c4d4"></i></div></div>
+    <div class="row"><div class="rt"><span>Stalls available at SVC Mall</span><span>31 clicks · ₹1.44 each</span></div><div class="bar"><i style="--w:28%;background-color:#08c4d4"></i></div></div>
+    <div class="row"><div class="rt"><span>Near Bellary Chowrasta</span><span>7 clicks · ₹3.07 each</span></div><div class="bar"><i style="--w:13%;background-color:#08c4d4"></i></div></div>
+    
+  </div>
+  <div class="post">
+    <h3>💬 Messaging campaigns</h3><small>Campaigns that started WhatsApp and Instagram conversations</small>
+    <div class="row"><div class="rt"><span>Your Dream Home Awaits!</span><span>18 conversations · ₹20.36 each</span></div><div class="bar"><i style="--w:100%;background-color:#08c4d4"></i></div></div>
+    <div class="row"><div class="rt"><span>IM &amp; MSG WhatsApp</span><span>15 conversations · ₹338.98 each</span></div><div class="bar p"><i style="--w:83%"></i></div></div>
+    
+  </div>
+  <div class="post">
+    <h3>📈 Click-through rate</h3><small>Share of people who clicked after seeing the ad, across all types</small>
+    <div class="row"><div class="rt"><span>Mahagiri HYD</span><span>2.65%</span></div><div class="bar p"><i style="--w:100%"></i></div></div>
+    <div class="row"><div class="rt"><span>Golden</span><span>2.16%</span></div><div class="bar p"><i style="--w:82%"></i></div></div>
+    <div class="row"><div class="rt"><span>DBD HYD</span><span>0.99%</span></div><div class="bar p"><i style="--w:37%"></i></div></div>
+    
+  </div>
+</section>
+
+<section>
+  <h2><span class="ic">🧭</span>My journey</h2>
+  <div class="tools"><button class="bt" id="tlall">Expand all</button></div>
+  <ol class="tls">
+    <li class="tl"><button class="tlb" aria-expanded="false"><span class="yr">2016–17</span><span class="tt">School pupil leader</span><span class="chev">+</span></button><div class="tld"><p>Took responsibility as school pupil leader for the 2016–2017 academic year. Also appreciated for conducting a quiz competition.</p></div></li>
+    
+    
+    
+    <li class="tl"><button class="tlb" aria-expanded="false"><span class="yr">Jun 2024</span><span class="tt">Sales and digital marketing begin</span><span class="chev">+</span></button><div class="tld"><p>Started at Anantha Projects in sales and at Saurabhii Infra Projects as Social Media Manager, both in Kurnool. My earliest Meta Ads report starts on 11 June 2024.</p></div></li>
+    <li class="tl"><button class="tlb" aria-expanded="false"><span class="yr">Apr 2025</span><span class="tt">Both roles wrap up</span><span class="chev">+</span></button><div class="tld"><p>Both roles ran through April 2025. My time at Anantha Projects covered Sales Advisor, Business Development Executive and Digital Co-ordinator work.</p></div></li>
+    <li class="tl"><button class="tlb" aria-expanded="false"><span class="yr">May–Aug 2025</span><span class="tt">Digital Co-ordinator, hospital</span><span class="chev">+</span></button><div class="tld"><p>Managed social media for Viswabharathi Medical College &amp; Hospital in Penchikalpadu, Kurnool.</p></div></li>
+    <li class="tl"><button class="tlb" aria-expanded="false"><span class="yr">Today</span><span class="tt">Based in Kurnool</span><span class="chev">+</span></button><div class="tld"><p>Running Meta Ads campaigns: 51 campaigns and ₹173,758.75 in ad spend across my reports so far. Get in touch to work together.</p></div></li>
+  </ol>
+</section>
+
+
+
+<section>
+  <h2>Beyond work</h2>
+  <div class="post">
+    <ul>
+      <li>School pupil leader, 2016–2017</li>
+      <li>Class representative</li>
+      <li>Appreciated for conducting a quiz competition</li>
+      <li>Sports, dancing and drawing</li>
+    </ul>
+    <p>Off the clock I surf the net for new digital tactics and trends, listen to music, drive, play volleyball and cook.</p>
+  </div>
+</section>
+
+<footer>
+  <h2>Let’s grow your brand</h2>
+  <p>Email: <a href="mailto:udaydamam@gmail.com">udaydamam@gmail.com</a></p>
+  <p>Phone: <a href="tel:+919177033342">9177033342</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/damam-simhadri-a49b7937b" target="_blank" rel="noopener">linkedin.com/in/damam-simhadri</a></p>
+  <p>📍 5_27/2, Near Charitra Residence, Srinivasa Nagar, Balaji Nagar, Kurnool, Andhra Pradesh 518006, India (Stantanpuram)</p>
+<div class="cta" style="margin-top:16px">
+    <a class="btn" style="background:#25d366" href="https://wa.me/919177033342" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn" href="mailto:udaydamam@gmail.com">Email</a>
+    <a class="btn alt" style="color:inherit;border-color:rgba(255,255,255,.4)" href="tel:+919177033342">Call</a>
+    <a class="btn alt" style="color:inherit;border-color:rgba(255,255,255,.4)" href="https://www.linkedin.com/in/damam-simhadri-a49b7937b" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+</main>
+<script>
+var D={
+mkt:["Performance Marketing","Search Engine Marketing","Social Media Marketing","Social media pages management","WhatsApp campaigns","Brand strategy"],
+role:["Marketing & Strategy","Campaign Manager","Campaign Planner","Meta Ads Specialist","Google Ads Specialist","Marketing Strategist","Marketing Analyst","Performance Marketing Manager","Lead Generation Specialist","Social Media Strategist","Social Media Manager","Digital Marketing Strategist","Influencer/Content Creator"],
+lead:["People management","Team management","Budget management","School pupil leader","Class representative"],
+tool:["MS Office (basic packages)"],
+lang:["English","Hindi","Telugu"]};
+var p=document.getElementById("panel");
+var X={
+"Performance Marketing":"Paid campaigns built around a measurable goal, such as enquiries or site visits, with budget shifted toward what works.",
+"Search Engine Marketing":"Paid search ads that put a brand in front of people who are already looking for what it offers.",
+"Social Media Marketing":"Planning and publishing content across social platforms to grow an audience and bring in enquiries.",
+"Social media pages management":"Running brand pages day to day: content calendar, captions, creatives, replies and a consistent look. Done for Saurabhii Infra Projects and Viswabharathi Medical College & Hospital.",
+"WhatsApp campaigns":"Broadcast and follow-up messages that move a lead from first enquiry to a site visit or appointment.",
+"Brand strategy":"Deciding how a brand should look, sound and position itself, so every post and ad feels like it comes from the same place.",
+"Marketing & Strategy":"Connecting marketing activity to business goals: who to reach, with what message, on which channel.",
+"Campaign Manager":"Running a campaign end to end: setup, launch, monitoring and reporting.",
+"Campaign Planner":"Mapping goal, audience, budget, timeline and content before anything goes live.",
+"Meta Ads Specialist":"Creating and managing paid ads on Facebook and Instagram, with audience targeting and creative testing.",
+"Google Ads Specialist":"Setting up search ads, keywords and budgets on Google Ads to reach people at the moment they search.",
+"Marketing Strategist":"Choosing the channel mix and message that fit a brand’s goals and budget.",
+"Marketing Analyst":"Reading campaign numbers such as reach, clicks and enquiries to decide what to keep, fix or stop.",
+"Performance Marketing Manager":"Owning paid results and the budget behind them, and guiding the team that delivers them.",
+"Lead Generation Specialist":"Capturing enquiries through ads, forms and WhatsApp and handing them to sales. My time as a sales advisor shows me what makes a lead worth following up.",
+"Social Media Strategist":"Planning what to post, when and why, based on the audience and the goal.",
+"Social Media Manager":"Managing accounts day to day. This was my role at Saurabhii Infra Projects.",
+"Digital Marketing Strategist":"Joining social, search and messaging into one plan instead of separate efforts.",
+"Influencer/Content Creator":"Creating posts, short videos and creatives that people want to engage with.",
+"People management":"Guiding individuals with clear tasks and honest feedback.",
+"Team management":"Coordinating a team toward shared targets, drawing on my sales advisor and business development work.",
+"Budget management":"Planning and tracking campaign spend so money goes to what performs.",
+"School pupil leader":"Led my school as pupil leader in the 2016–2017 academic year.",
+"Class representative":"Represented my class as class representative.",
+"MS Office (basic packages)":"Working knowledge of Word, Excel and PowerPoint for reports, tracking sheets and presentations."};
+function show(k){var h='<ul class="chips">'+D[k].map(function(x,i){return X[x]?'<li><button aria-pressed="false" data-i="'+i+'">'+x+'</button></li>':'<li>'+x+'</li>'}).join('')+'</ul>';var any=D[k].some(function(x){return X[x]});p.innerHTML=h+(any?'<div class="det" id="det"><p>Tap a skill to see how I use it.</p></div>':'');p.querySelectorAll('button').forEach(function(b){b.onclick=function(){p.querySelectorAll('button').forEach(function(o){o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');var n=D[k][b.dataset.i];document.getElementById('det').innerHTML='<b>'+n+'</b><p>'+X[n]+'</p>'}})}
+document.querySelectorAll(".hl button").forEach(function(b){b.onclick=function(){
+document.querySelectorAll(".hl button").forEach(function(o){o.setAttribute("aria-pressed","false")});
+b.setAttribute("aria-pressed","true");show(b.dataset.k)}});
+show("mkt");
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+document.documentElement.classList.add("js");
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll("h2,.post,.panel,.funnel").forEach(function(x){x.classList.add("rv");io.observe(x)});
+document.querySelectorAll("[data-n]").forEach(function(b){var n=+b.dataset.n,i=0;if(rm){b.textContent=n;return}var t=setInterval(function(){b.textContent=++i;if(i>=n)clearInterval(t)},350)});
+var T=document.getElementById("typed"),w=["Social Media Marketer","Performance Marketer","Brand Strategist","WhatsApp Campaign Builder"],wi=0,ci=0,del=false;
+if(!rm)(function tick(){var s=w[wi];T.textContent=s.slice(0,ci);if(!del&&ci<s.length){ci++;setTimeout(tick,70)}else if(!del){del=true;setTimeout(tick,1600)}else if(ci>0){ci--;setTimeout(tick,35)}else{del=false;wi=(wi+1)%w.length;setTimeout(tick,300)}})();
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var b=e.target,n=+b.dataset.c,d=+(b.dataset.d||0),pre=b.dataset.p||"",t0=null,o={minimumFractionDigits:d,maximumFractionDigits:d};function f(t){t0=t0||t;var k=Math.min((t-t0)/1400,1);b.textContent=pre+(n*(1-Math.pow(1-k,3))).toLocaleString("en-IN",o);if(k<1)requestAnimationFrame(f)}if(rm)b.textContent=pre+n.toLocaleString("en-IN",o);else requestAnimationFrame(f);cio.unobserve(b)})});
+document.querySelectorAll("[data-c]").forEach(function(b){cio.observe(b)});
+(function(){if(rm)return;var c=document.getElementById("fx"),x=c.getContext("2d"),W,H,P=[],m={x:-999,y:-999},dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}rs();addEventListener("resize",rs);
+for(var i=0;i<(W<600?32:60);i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*2+1});
+addEventListener("pointermove",function(e){m.x=e.clientX;m.y=e.clientY});
+(function loop(){x.clearRect(0,0,W,H);var cs=getComputedStyle(document.documentElement),o=cs.getPropertyValue("--or").trim(),l=cs.getPropertyValue("--mute").trim();
+P.forEach(function(p,i){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;var dx=m.x-p.x,dy=m.y-p.y;if(Math.hypot(dx,dy)<140){p.x-=dx*.01;p.y-=dy*.01}
+x.globalAlpha=.7;x.fillStyle=o;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill();
+for(var j=i+1;j<P.length;j++){var q=P[j],e=Math.hypot(p.x-q.x,p.y-q.y);if(e<120){x.globalAlpha=(1-e/120)*.3;x.strokeStyle=l;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}});requestAnimationFrame(loop)})()})();
+document.addEventListener("pointermove",function(e){var t=e.target.closest&&e.target.closest(".post");if(t){var r=t.getBoundingClientRect();t.style.setProperty("--mx",e.clientX-r.left+"px");t.style.setProperty("--my",e.clientY-r.top+"px")}});
+(function(){var pr=document.querySelector(".profile");if(rm)return;pr.addEventListener("pointermove",function(e){if(e.pointerType!=="mouse")return;var r=pr.getBoundingClientRect(),dx=(e.clientX-r.left)/r.width-.5,dy=(e.clientY-r.top)/r.height-.5;pr.style.transform="perspective(900px) rotateY("+dx*6+"deg) rotateX("+(-dy*6)+"deg)"});pr.addEventListener("pointerleave",function(){pr.style.transform=""})})();
+document.addEventListener("click",function(e){var b=e.target.closest(".chips button,.hl button");if(!b||rm)return;var r=b.getBoundingClientRect();for(var i=0;i<12;i++){var s=document.createElement("i"),a=i/12*6.28,d=30+Math.random()*30;s.className="sp";s.style.cssText="left:"+(r.left+r.width/2)+"px;top:"+(r.top+r.height/2)+"px;--dx:"+Math.cos(a)*d+"px;--dy:"+Math.sin(a)*d+"px";document.body.appendChild(s);setTimeout(function(n){return function(){n.remove()}}(s),700)}});
+(function(){var pg=document.getElementById("pg");function u(){var h=document.documentElement.scrollHeight-innerHeight;pg.style.width=(h>0?scrollY/h*100:0)+"%"}addEventListener("scroll",u,{passive:true});u();if(rm)return;
+function add(c,x,y,ms){var e=document.createElement("i");e.className=c;e.style.left=x+"px";e.style.top=y+"px";document.body.appendChild(e);setTimeout(function(){e.remove()},ms)}
+var lt=0;addEventListener("pointermove",function(e){var n=Date.now();if(n-lt>35){lt=n;add("tr",e.clientX,e.clientY,600)}});
+addEventListener("pointerdown",function(e){add("rp",e.clientX,e.clientY,700)});
+setInterval(function(){if(document.hidden)return;var s=document.createElement("div");s.className="ss";s.style.left=Math.random()*innerWidth*.6+"px";s.style.top=Math.random()*innerHeight*.4+"px";document.body.appendChild(s);setTimeout(function(){s.remove()},1200)},3500)})();
+(function(){var M={"What I do":"🛠️","Highlights":"🏅","How I turn":"🔀","Experience":"💼","Campaign results":"📊","Marketing in pictures":"🎨","Education":"🎓","Beyond work":"🌟","Let":"🚀"};
+document.querySelectorAll("h2").forEach(function(h){var t=h.textContent.trim();for(var k in M){if(t.indexOf(k)===0){var s=document.createElement("span");s.className="ic";s.textContent=M[k];h.insertBefore(s,h.firstChild);break}}});
+var T={"Healthcare":"🏥","Real estate":"🏢"},E={"Diploma in Pharmacy":"💊","Intermediate":"📘","SSC":"🏫"};
+document.querySelectorAll(".tag").forEach(function(e){var k=e.textContent.trim();if(T[k])e.textContent=T[k]+" "+k});
+document.querySelectorAll(".grid .post h3").forEach(function(e){var k=e.textContent.trim();if(E[k])e.textContent=E[k]+" "+k});
+var F={"Email":"✉️","Phone":"📞","LinkedIn":"🔗","H. No":"📍"};
+document.querySelectorAll("footer p").forEach(function(e){for(var k in F){if(e.textContent.indexOf(k)===0){e.insertBefore(document.createTextNode(F[k]+" "),e.firstChild);break}}});
+function H(t){return Array.prototype.find.call(document.querySelectorAll("h2"),function(h){return h.textContent.indexOf(t)>-1})}
+var I=[["🏠","Home",function(){return document.querySelector(".profile")}],["🛠️","Skills",function(){return H("What I do")}],["🎨","Pictures",function(){return H("Marketing in pictures")}],["💼","Experience",function(){return H("Experience")}],["📊","Results",function(){return H("Campaign results")}],["✉️","Contact",function(){return document.querySelector("footer")}]];
+var d=document.createElement("nav");d.className="dock";d.setAttribute("aria-label","Sections");
+I.forEach(function(it){var b=document.createElement("button");b.textContent=it[0];b.setAttribute("aria-label",it[1]);b.onclick=function(){var t=it[2]();if(it[1]==="Home")scrollTo({top:0,behavior:rm?"auto":"smooth"});else if(t)t.scrollIntoView({behavior:rm?"auto":"smooth",block:"start"})};d.appendChild(b)});
+document.body.appendChild(d);
+function act(){var bs=d.children,cur=0;I.forEach(function(it,i){var t=it[2]();if(t&&t.getBoundingClientRect().top<innerHeight*.45)cur=i});for(var i=0;i<bs.length;i++)bs[i].classList.toggle("on",i===cur)}
+addEventListener("scroll",act,{passive:true});act()})();
+(function(){var tt=document.getElementById("toast"),tm;function toast(m){tt.textContent=m;tt.classList.add("show");clearTimeout(tm);tm=setTimeout(function(){tt.classList.remove("show")},2200)}
+function cp(t,ok){try{navigator.clipboard.writeText(t).then(function(){toast(ok)},function(){toast("Copy is blocked here")})}catch(e){toast("Copy is blocked here")}}
+document.getElementById("cp").onclick=function(){cp("udaydamam@gmail.com","Email copied")};
+document.getElementById("sh").onclick=function(){if(navigator.share){navigator.share({title:document.title,url:location.href}).catch(function(){})}else cp(location.href,"Link copied")};
+document.getElementById("vr").onclick=function(){var h=Array.prototype.find.call(document.querySelectorAll("h2"),function(x){return x.textContent.indexOf("Campaign results")>-1});if(h)h.scrollIntoView({behavior:rm?"auto":"smooth",block:"start"})};
+var L=document.querySelectorAll(".tl"),all=document.getElementById("tlall");
+function set(l,o){l.classList.toggle("open",o);l.querySelector(".tlb").setAttribute("aria-expanded",o)}
+L.forEach(function(l){l.querySelector(".tlb").onclick=function(){set(l,!l.classList.contains("open"))}});
+all.onclick=function(){var o=all.textContent==="Expand all";L.forEach(function(l){set(l,o)});all.textContent=o?"Collapse all":"Expand all"};
+set(L[L.length-1],true)})();
+(function(){var s=document.querySelector('svg[aria-label="Phone showing a social media post"]');if(!s)return;for(var i=0;i<5;i++){var t=document.createElementNS("http://www.w3.org/2000/svg","text");t.setAttribute("class","hrt2");t.setAttribute("x",58+i*9);t.setAttribute("y",104);t.style.animationDelay=(i*.6)+"s";t.style.setProperty("--dx",(i%2?8:-8)+"px");t.textContent="❤️";s.appendChild(t)}})();
+</script>
+</body>
+</html>
